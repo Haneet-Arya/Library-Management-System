@@ -11,10 +11,18 @@ public class db {
             s= con.createStatement();
             System.out.println("Success");
             return true;
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         return false;
+    }
+    public static void logOut(){
+        try {
+            con.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 }
