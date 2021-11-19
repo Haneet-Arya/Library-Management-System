@@ -24,5 +24,15 @@ public class db {
             e.printStackTrace();
         }
     }
+    public static boolean inserStudent(String name, String phone){
+        String query = "insert into student(sname, phone) values('"+name+"','"+phone+"');";
+        try {
+            s.execute(query);
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 
 }

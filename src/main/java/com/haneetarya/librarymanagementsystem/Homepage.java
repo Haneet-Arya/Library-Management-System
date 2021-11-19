@@ -41,7 +41,14 @@ public class Homepage implements Initializable {
         }else if(sltd.equals("Submit Book")){
 
         }else if(sltd.equals("Add Student")){
-
+            root = new FXMLLoader(getClass().getResource("addstudent.fxml"));
+            stage = (Stage) (logout.getScene().getWindow());
+            try {
+                stage.setScene(new Scene(root.load()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            stage.show();
         }else{
 
         }
