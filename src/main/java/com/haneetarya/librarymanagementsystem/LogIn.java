@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class LogIn {
+    public Button exit;
     @FXML
     private TextField pwd;
     @FXML
@@ -46,5 +47,9 @@ public class LogIn {
         else {
             failed.setText("Enter the User Id and Password");
         }
+    }
+
+    public void exit(ActionEvent actionEvent) {
+        System.exit(0);
     }
 }

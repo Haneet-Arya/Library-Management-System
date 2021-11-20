@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.haneetarya.librarymanagementsystem.Issuebook">
    <children>
       <Label fx:id="back" layoutX="75.0" layoutY="60.0" onMouseClicked="#backToHome" text="&lt;- back">
@@ -24,17 +23,22 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <TextField fx:id="studentid" layoutX="557.0" layoutY="273.0" prefHeight="44.0" prefWidth="241.0" />
       <TextField fx:id="bookid" layoutX="156.0" layoutY="273.0" prefHeight="44.0" prefWidth="241.0" />
+      <TextField fx:id="studentid" layoutX="557.0" layoutY="273.0" prefHeight="44.0" prefWidth="241.0" />
       <Button fx:id="issuebook" layoutX="746.0" layoutY="384.0" mnemonicParsing="false" onAction="#issueBook" text="Issue Book">
          <font>
             <Font size="27.0" />
          </font>
       </Button>
-      <Button fx:id="newstudent" layoutX="750.0" layoutY="474.0" mnemonicParsing="false" onAction="#newStudent" text="New Student?">
+      <Button fx:id="newBook" layoutX="750.0" layoutY="474.0" mnemonicParsing="false" onAction="#newBook" text="New Book?">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
+      <Label fx:id="message" layoutX="519.0" layoutY="552.0" prefHeight="28.0" textFill="RED">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
