@@ -38,6 +38,6 @@
             <Font size="26.0" />
          </font>
       </Button>
-      <Label fx:id="failed" layoutX="468.0" layoutY="441.0"/>
+      <Label fx:id="failed" layoutX="468.0" layoutY="441.0" textFill="red"/>
    </children>
 </AnchorPane>

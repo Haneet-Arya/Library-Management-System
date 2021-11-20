@@ -37,7 +37,14 @@ public class Homepage implements Initializable {
         RadioButton rb = (RadioButton) tg.getSelectedToggle();
         String sltd = rb.getText();
         if (sltd.equals("Issue Book")){
-
+            root = new FXMLLoader(getClass().getResource("issuebook.fxml"));
+            stage = (Stage) (logout.getScene().getWindow());
+            try {
+                stage.setScene(new Scene(root.load()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            stage.show();
         }else if(sltd.equals("Submit Book")){
 
         }else if(sltd.equals("Add Student")){
@@ -50,7 +57,14 @@ public class Homepage implements Initializable {
             }
             stage.show();
         }else{
-
+            root = new FXMLLoader(getClass().getResource("addbook.fxml"));
+            stage = (Stage) (logout.getScene().getWindow());
+            try {
+                stage.setScene(new Scene(root.load()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            stage.show();
         }
     }
 

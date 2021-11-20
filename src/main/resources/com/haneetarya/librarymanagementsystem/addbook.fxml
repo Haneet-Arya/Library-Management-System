@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.haneetarya.librarymanagementsystem.Addbook">
+<children>
+    <Label fx:id="back" layoutX="75.0" layoutY="60.0" onMouseClicked="#backToHome" text="&lt;- back">
+        <font>
+            <Font size="31.0" />
+        </font>
+    </Label>
+      <Label layoutX="270.0" layoutY="94.0" text="Enter the Book Details" textFill="#3b28cd">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="116.0" layoutY="259.0" text="Book Name">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="434.0" layoutY="254.0" text="Author Name">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="750.0" layoutY="254.0" text="Publisher Name">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="bookname" layoutX="97.0" layoutY="348.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="authorname" layoutX="418.0" layoutY="342.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="publisher" layoutX="736.0" layoutY="341.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <Button fx:id="addbook" layoutX="120.0" layoutY="437.0" mnemonicParsing="false" text="Add Book" onAction="#addBook">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Button>
+    <Label fx:id="message" layoutX="519.0" layoutY="552.0" prefHeight="28.0" textFill="RED">
+        <font>
+            <Font size="23.0" />
+        </font>
+    </Label>
+</children>
+</AnchorPane>
