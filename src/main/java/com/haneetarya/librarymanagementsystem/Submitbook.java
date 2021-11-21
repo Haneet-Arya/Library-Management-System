@@ -12,22 +12,22 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Addstudent {
+public class Submitbook {
     @FXML
     public Label back;
     @FXML
-    public TextField name;
+    public Button submitbook;
     @FXML
-    public TextField phone;
+    public TextField bookid;
     @FXML
-    public Button submit;
+    public TextField studentid;
     @FXML
     public Label message;
     private FXMLLoader root;
     private Stage stage;
     public void backToHome(MouseEvent mouseEvent) {
         root = new FXMLLoader(getClass().getResource("homepage.fxml"));
-        stage = (Stage) (message.getScene().getWindow());
+        stage = (Stage) (submitbook.getScene().getWindow());
         try {
             stage.setScene(new Scene(root.load()));
         } catch (IOException e) {
@@ -36,23 +36,23 @@ public class Addstudent {
         stage.show();
     }
 
-    public void submit(ActionEvent actionEvent) {
-        String nam = name.getText();
-        String phon = phone.getText();
-        if(!nam.equals("") && !phon.equals("")){
-            String ins = db.insertStudent(nam, phon);
+    public void submitBook(ActionEvent actionEvent) {
+        String sid = studentid.getText();
+        String bid = bookid.getText();
+        if(!sid.equals("") && !bid.equals("")){
+            String ins = db.submitBook(sid,bid);
 
             if(!ins.equals(db.FALSE)){
-                message.setText("Student Added: Student ID is " + ins);
-                name.setText("");
-                phone.setText("");
+                message.setText(ins);
+                bookid.setText("");
+                studentid.setText("");
             }
             else {
                 message.setText("Database Error");
             }
         }
         else {
-            message.setText("Please Enter the correct Name and Phone Number");
+            message.setText("Please Enter the correct Details");
         }
     }
 }

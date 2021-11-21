@@ -35,7 +35,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Label fx:id="message" layoutX="519.0" layoutY="552.0" prefHeight="28.0" textFill="RED">
+      <Label fx:id="message" textAlignment="CENTER" alignment="CENTER" layoutX="155.0" layoutY="554.0" textFill="RED">
          <font>
             <Font size="23.0" />
          </font>

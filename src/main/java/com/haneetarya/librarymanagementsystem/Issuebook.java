@@ -44,13 +44,15 @@ public class Issuebook {
 
             if(!ins.equals(db.FALSE)){
                 message.setText(ins);
+                bookid.setText("");
+                studentid.setText("");
             }
             else {
                 message.setText("Database Error");
             }
         }
         else {
-            message.setText("Please Enter the correct Name and Phone Number");
+            message.setText("Please Enter the correct Details");
         }
     }
 
