@@ -104,9 +104,25 @@ public class Homepage implements Initializable {
     }
 
     public void getBorrowList(ActionEvent actionEvent) {
+        root = new FXMLLoader(getClass().getResource("borrowlist.fxml"));
+        stage = (Stage) (logout.getScene().getWindow());
+        try {
+            stage.setScene(new Scene(root.load()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.show();
     }
 
     public void getBookList(ActionEvent actionEvent) {
+        root = new FXMLLoader(getClass().getResource("booklist.fxml"));
+        stage = (Stage) (logout.getScene().getWindow());
+        try {
+            stage.setScene(new Scene(root.load()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.show();
     }
 
     public void getStudentList(ActionEvent actionEvent) {

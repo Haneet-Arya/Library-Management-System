@@ -37,7 +37,36 @@ public class db {
             ResultSet rs = s.executeQuery(query);
             while(rs.next()){
                 ls.add(new Student(Integer.toString(rs.getInt("sid")), rs.getString("sname"), rs.getString("phone")));
-                System.out.println(rs.getInt("sid"));
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ls;
+    }
+    public static ObservableList<Borrow> borrowList(){
+        String query = "SELECT * from student natural join(borrow natural join book);";
+        ObservableList<Borrow> ls = FXCollections.observableArrayList();
+        try {
+            ResultSet rs = s.executeQuery(query);
+            while(rs.next()){
+                ls.add(new Borrow(rs.getInt("sid"), rs.getInt("bid"), rs.getString("bname")
+                        , rs.getString("sname"), rs.getString("bauthor"), rs.getString("bpublisher"),
+                        rs.getString("phone")));
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ls;
+    }
+public static ObservableList<Book> bookList(){
+        String query = "select * from book";
+        ObservableList<Book> ls = FXCollections.observableArrayList();
+        try {
+            ResultSet rs = s.executeQuery(query);
+            while(rs.next()){
+                ls.add(new Book(rs.getInt("bid"), rs.getString("bname"), rs.getString("bauthor"), rs.getString("bpublisher")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
