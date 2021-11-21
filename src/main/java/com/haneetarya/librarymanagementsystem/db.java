@@ -1,4 +1,7 @@
 package com.haneetarya.librarymanagementsystem;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.sql.*;
 
 public class db {
@@ -25,6 +28,21 @@ public class db {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public static ObservableList<Student> studentList(){
+        String query = "select * from student";
+        ObservableList<Student> ls = FXCollections.observableArrayList();
+        try {
+            ResultSet rs = s.executeQuery(query);
+            while(rs.next()){
+                ls.add(new Student(Integer.toString(rs.getInt("sid")), rs.getString("sname"), rs.getString("phone")));
+                System.out.println(rs.getInt("sid"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ls;
     }
 
     public static String submitBook(String sid, String bid){

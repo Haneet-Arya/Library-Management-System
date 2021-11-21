@@ -28,6 +28,9 @@ public class Homepage implements Initializable {
     public Button logout;
     @FXML
     public Button go;
+    public Button studentList;
+    public Button booklist;
+    public Button borrowlist;
     ToggleGroup tg;
     private FXMLLoader root;
     private Stage stage;
@@ -98,5 +101,22 @@ public class Homepage implements Initializable {
                 stage.show();
             }
         });
+    }
+
+    public void getBorrowList(ActionEvent actionEvent) {
+    }
+
+    public void getBookList(ActionEvent actionEvent) {
+    }
+
+    public void getStudentList(ActionEvent actionEvent) {
+        root = new FXMLLoader(getClass().getResource("studentlist.fxml"));
+        stage = (Stage) (logout.getScene().getWindow());
+        try {
+            stage.setScene(new Scene(root.load()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.show();
     }
 }
