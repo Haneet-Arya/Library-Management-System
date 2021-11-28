@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.haneetarya.librarymanagementsystem.Homepage">
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.haneetarya.librarymanagementsystem.Homepage">
    <children>
       <RadioButton fx:id="issue" layoutX="212.0" layoutY="274.0" mnemonicParsing="false" prefHeight="40.0" text="Issue Book">
          <font>
@@ -29,7 +29,7 @@
          <font>
             <Font size="34.0" />
          </font></Button>
-      <Label layoutX="313.0" layoutY="154.0" text="Choose the Option below">
+      <Label alignment="CENTER" layoutX="-3.0" layoutY="-3.0" prefHeight="164.0" prefWidth="1083.0" style="-fx-background-color: #b4826b;" text="Choose the Option below" textFill="blue">
          <font>
             <Font name="System Bold" size="40.0" />
          </font>
@@ -41,17 +41,17 @@
       </Button>
       <ButtonBar layoutX="11.0" layoutY="524.0" prefHeight="40.0" prefWidth="445.0">
         <buttons>
-          <Button fx:id="studentList" mnemonicParsing="false" text="Student List" onAction="#getStudentList">
+          <Button fx:id="studentList" mnemonicParsing="false" onAction="#getStudentList" text="Student List">
                <font>
                   <Font size="19.0" />
                </font>
             </Button>
-            <Button fx:id="booklist" mnemonicParsing="false" text="Book List" onAction="#getBookList">
+            <Button fx:id="booklist" mnemonicParsing="false" onAction="#getBookList" text="Book List">
                <font>
                   <Font size="19.0" />
                </font>
             </Button>
-            <Button fx:id="borrowlist" mnemonicParsing="false" text="Borrow List" onAction="#getBorrowList">
+            <Button fx:id="borrowlist" mnemonicParsing="false" onAction="#getBorrowList" text="Borrow List">
                <font>
                   <Font size="19.0" />
                </font>

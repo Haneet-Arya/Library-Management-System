@@ -10,6 +10,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 
 public class Addbook {
@@ -47,15 +49,27 @@ public class Addbook {
             String ins = db.insertBook(nam, author,publish);
 
             if(!ins.equals(db.FALSE)){
-                message.setText("Book Added: Book ID is " + ins);
+                showMessage("Book Added: Book ID is " + ins, "Student Added",JOptionPane.INFORMATION_MESSAGE);
+//                message.setText( + ins);
             }
             else {
-                message.setText("Database Error");
+                showMessage("Can't Connect to Database","Database Error",JOptionPane.ERROR_MESSAGE);
+//                message.setText("Database Error");
             }
         }
         else {
-            message.setText("Please Enter the correct Book Name, Author and Publisher");
+            showMessage("Please Enter the correct Book Name, Author and Publisher","Wrong Details",JOptionPane.WARNING_MESSAGE);
+
+//            message.setText("Please Enter the correct Book Name, Author and Publisher");
         }
+    }
+    private void showMessage(String message, String title, int type) {
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                JOptionPane.showMessageDialog(null, message,title,type);
+            }
+        });
     }
 }
 

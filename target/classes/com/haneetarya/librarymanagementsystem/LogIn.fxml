@@ -7,18 +7,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.haneetarya.librarymanagementsystem.LogIn">
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.haneetarya.librarymanagementsystem.LogIn">
    <children>
-      <Label layoutX="478.0" layoutY="105.0" text="Login" AnchorPane.leftAnchor="478.0">
+      <Label alignment="CENTER" layoutY="-17.0" prefHeight="173.0" prefWidth="1158.0" style="-fx-background-color: #b4826b;" text="Login" AnchorPane.leftAnchor="0.0" textFill="blue">
          <font>
             <Font name="System Bold" size="41.0" />
          </font>
       </Label>
-      <TextField fx:id="userid" layoutX="457.0" layoutY="286.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="userid" layoutX="457.0" layoutY="286.0" prefHeight="35.0" prefWidth="250.0" promptText="Enter your UserID">
          <font>
             <Font size="20.0" />
          </font></TextField>
-      <PasswordField fx:id="pwd" layoutX="455.0" layoutY="398.0" prefHeight="35.0" prefWidth="250.0">
+      <PasswordField fx:id="pwd" layoutX="455.0" layoutY="398.0" prefHeight="35.0" prefWidth="250.0" promptText="Enter your Password">
          <font>
             <Font size="20.0" />
          </font></PasswordField>

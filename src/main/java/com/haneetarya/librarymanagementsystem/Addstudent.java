@@ -9,7 +9,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
+import java.awt.*;
 import java.io.IOException;
 
 public class Addstudent {
@@ -43,16 +45,28 @@ public class Addstudent {
             String ins = db.insertStudent(nam, phon);
 
             if(!ins.equals(db.FALSE)){
-                message.setText("Student Added: Student ID is " + ins);
+                showMessage("Student Added: Student ID is " + ins, "Student Added",JOptionPane.INFORMATION_MESSAGE);
+
+
                 name.setText("");
                 phone.setText("");
             }
             else {
-                message.setText("Database Error");
+                showMessage("Can't Connect to Database","Database Error",JOptionPane.ERROR_MESSAGE);
+
             }
         }
         else {
-            message.setText("Please Enter the correct Name and Phone Number");
+            showMessage("Please Enter the correct Name and Phone Number","Wrong Details",JOptionPane.WARNING_MESSAGE);
+//            message.setText("Please Enter the correct Name and Phone Number");
         }
+    }
+    private void showMessage(String message, String title, int type) {
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                JOptionPane.showMessageDialog(null, message,title,type);
+            }
+        });
     }
 }

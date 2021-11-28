@@ -6,24 +6,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.haneetarya.librarymanagementsystem.Submitbook">
+<AnchorPane style="-fx-background-color: lightblue;" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.haneetarya.librarymanagementsystem.Submitbook">
     <children>
-        <Label fx:id="back" layoutX="75.0" layoutY="60.0" onMouseClicked="#backToHome" text="&lt;- back">
-            <font>
-                <Font size="31.0" />
-            </font>
-        </Label>
+
 
         <Label fx:id="message" alignment="CENTER" layoutX="323.0" layoutY="562.0"  textAlignment="CENTER" textFill="RED">
             <font>
                 <Font size="23.0" />
             </font>
         </Label>
-      <Label layoutX="401.0" layoutY="114.0" text="Submit book">
+      <Label textFill="blue" alignment="CENTER" layoutX="-3.0" layoutY="-3.0" prefHeight="164.0" prefWidth="1083.0" style="-fx-background-color: #b4826b;" text="Submit book">
          <font>
             <Font name="System Bold" size="49.0" />
          </font>
       </Label>
+        <Label fx:id="back" layoutX="75.0" layoutY="60.0" onMouseClicked="#backToHome" text="&lt;- back">
+            <font>
+                <Font size="31.0" />
+            </font>
+        </Label>
       <Label layoutX="162.0" layoutY="239.0" text="Student ID">
          <font>
             <Font size="30.0" />

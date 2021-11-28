@@ -10,6 +10,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 
 public class Issuebook {
@@ -43,16 +45,20 @@ public class Issuebook {
             String ins = db.issueBook(sid,bid);
 
             if(!ins.equals(db.FALSE)){
-                message.setText(ins);
+                showMessage(ins,"",JOptionPane.INFORMATION_MESSAGE);
+//                message.setText(ins);
                 bookid.setText("");
                 studentid.setText("");
             }
             else {
-                message.setText("Database Error");
+                showMessage("Can't Connect to Database","Database Error",JOptionPane.ERROR_MESSAGE);
+//                message.setText("Database Error");
             }
         }
         else {
-            message.setText("Please Enter the correct Details");
+            showMessage("Please Enter the correct Details","Wrong Details",JOptionPane.WARNING_MESSAGE);
+
+//            message.setText("Please Enter the correct Details");
         }
     }
 
@@ -65,5 +71,13 @@ public class Issuebook {
             e.printStackTrace();
         }
         stage.show();
+    }
+    private void showMessage(String message, String title, int type) {
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                JOptionPane.showMessageDialog(null, message,title,type);
+            }
+        });
     }
 }

@@ -3,15 +3,14 @@ package com.haneetarya.librarymanagementsystem;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import javax.swing.*;
+import java.awt.*;
 
 public class LogIn {
     public Button exit;
@@ -31,7 +30,8 @@ public class LogIn {
     public void login(ActionEvent actionEvent) {
         if(!userid.getText().equals("") && !pwd.getText().equals("")){
             if(!db.logIn(userid.getText(),pwd.getText())){
-                failed.setText("Log In failed !!!");
+                showMessage("Please Check your user ID or Password", JOptionPane.ERROR_MESSAGE );
+
             }else {
                 try {
                     root = new FXMLLoader(getClass().getResource("homepage.fxml"));
@@ -45,11 +45,20 @@ public class LogIn {
             }
         }
         else {
-            failed.setText("Enter the User Id and Password");
+            showMessage("Enter the User Id and Password", JOptionPane.WARNING_MESSAGE );
+//            failed.setText();
         }
     }
 
     public void exit(ActionEvent actionEvent) {
         System.exit(0);
+    }
+    private void showMessage(String message, int type) {
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                JOptionPane.showMessageDialog(null, message, "Login Failed",type);
+            }
+        });
     }
 }

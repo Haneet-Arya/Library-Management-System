@@ -6,18 +6,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.haneetarya.librarymanagementsystem.Addbook">
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.haneetarya.librarymanagementsystem.Addbook">
 <children>
+
+      <Label alignment="CENTER" layoutX="-3.0" layoutY="-3.0" prefHeight="164.0" prefWidth="1083.0" style="-fx-background-color: #b4826b;" text="Enter the Book Details" textFill="blue">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
     <Label fx:id="back" layoutX="75.0" layoutY="60.0" onMouseClicked="#backToHome" text="&lt;- back">
         <font>
             <Font size="31.0" />
         </font>
     </Label>
-      <Label layoutX="270.0" layoutY="94.0" text="Enter the Book Details" textFill="#3b28cd">
-         <font>
-            <Font name="System Bold" size="48.0" />
-         </font>
-      </Label>
       <Label layoutX="116.0" layoutY="259.0" text="Book Name">
          <font>
             <Font size="25.0" />
@@ -33,27 +34,27 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <TextField fx:id="bookname" layoutX="97.0" layoutY="348.0">
+      <TextField fx:id="bookname" layoutX="87.0" layoutY="344.0" promptText="Enter Book Name">
          <font>
-            <Font size="17.0" />
+            <Font size="19.0" />
          </font>
       </TextField>
-      <TextField fx:id="authorname" layoutX="418.0" layoutY="342.0">
+      <TextField fx:id="authorname" layoutX="418.0" layoutY="342.0" promptText="Enter Author Name">
          <font>
-            <Font size="17.0" />
+            <Font size="19.0" />
          </font>
       </TextField>
-      <TextField fx:id="publisher" layoutX="736.0" layoutY="341.0">
+      <TextField fx:id="publisher" layoutX="736.0" layoutY="341.0" promptText="Enter Publisher Name">
          <font>
-            <Font size="17.0" />
+            <Font size="19.0" />
          </font>
       </TextField>
-      <Button fx:id="addbook" layoutX="120.0" layoutY="437.0" mnemonicParsing="false" text="Add Book" onAction="#addBook">
+      <Button fx:id="addbook" layoutX="480.0" layoutY="476.0" mnemonicParsing="false" onAction="#addBook" text="Add Book">
          <font>
             <Font name="System Bold" size="27.0" />
          </font>
       </Button>
-    <Label fx:id="message" textAlignment="CENTER" alignment="CENTER" layoutX="519.0" layoutY="552.0" prefHeight="28.0" textFill="RED">
+    <Label fx:id="message" alignment="CENTER" layoutX="519.0" layoutY="552.0" prefHeight="28.0" textAlignment="CENTER" textFill="RED">
         <font>
             <Font size="23.0" />
         </font>

@@ -6,16 +6,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.haneetarya.librarymanagementsystem.Issuebook">
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.haneetarya.librarymanagementsystem.Issuebook">
    <children>
+
+      <Label alignment="CENTER" layoutX="-3.0" layoutY="-3.0" prefHeight="164.0" prefWidth="1083.0" style="-fx-background-color: #b4826b;" text="Issue Book" textFill="BLUE">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
       <Label fx:id="back" layoutX="75.0" layoutY="60.0" onMouseClicked="#backToHome" text="&lt;- back">
          <font>
             <Font size="31.0" />
-         </font>
-      </Label>
-      <Label layoutX="160.0" layoutY="183.0" text="Enter the Book ID">
-         <font>
-            <Font size="26.0" />
          </font>
       </Label>
       <Label layoutX="537.0" layoutY="177.0" text="Enter the Student ID">
@@ -23,8 +24,14 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <TextField fx:id="bookid" layoutX="156.0" layoutY="273.0" prefHeight="44.0" prefWidth="241.0" />
-      <TextField fx:id="studentid" layoutX="557.0" layoutY="273.0" prefHeight="44.0" prefWidth="241.0" />
+      <TextField fx:id="bookid" layoutX="156.0" layoutY="273.0" prefWidth="241.0" promptText="BID">
+         <font>
+            <Font size="20.0" />
+         </font></TextField>
+      <TextField fx:id="studentid" layoutX="557.0" layoutY="273.0" prefWidth="241.0" promptText="SID">
+         <font>
+            <Font size="20.0" />
+         </font></TextField>
       <Button fx:id="issuebook" layoutX="746.0" layoutY="384.0" mnemonicParsing="false" onAction="#issueBook" text="Issue Book">
          <font>
             <Font size="27.0" />
@@ -35,9 +42,14 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Label fx:id="message" textAlignment="CENTER" alignment="CENTER" layoutX="155.0" layoutY="554.0" textFill="RED">
+      <Label fx:id="message" alignment="CENTER" layoutX="155.0" layoutY="554.0" textAlignment="CENTER" textFill="RED">
          <font>
             <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="126.0" layoutY="177.0" text="Enter Book ID">
+         <font>
+            <Font size="26.0" />
          </font>
       </Label>
    </children>
