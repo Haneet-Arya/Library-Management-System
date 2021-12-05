@@ -1,6 +1,6 @@
 # Library-Management-System
 
-## Software Used - 
+# Software Used - 
     1) IntelliJ Idea Community
     2) Xampp with mariadb and phpmyadminn
     
@@ -11,4 +11,4 @@ Steps to Run the Project:-
  4) Open phpmyadmin and create a database with name Library
  5) Now import the database using Library.sql file
  6) Run the main function from HelloApplication.java file
-# You are ready to go
+### You are ready to go
