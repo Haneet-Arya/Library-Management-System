@@ -1,10 +1,10 @@
 # Library-Management-System
 
-# Software Used - 
+## Software Used - 
    1) IntelliJ Idea Community
    2) Xampp with mariadb and phpmyadminn
     
-Steps to Run the Project -
+## Steps to Run the Project -
  1) Install IntelliJ and Xammp on your System
  2) Set Up the Enviornment
  3) Configure Library and Modules with jdbc driver present in src/Lib folder
