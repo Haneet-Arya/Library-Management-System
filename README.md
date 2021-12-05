@@ -1,8 +1,8 @@
 # Library-Management-System
 
 # Software Used - 
-    1) IntelliJ Idea Community
-    2) Xampp with mariadb and phpmyadminn
+   1) IntelliJ Idea Community
+   2) Xampp with mariadb and phpmyadminn
     
 Steps to Run the Project -
  1) Install IntelliJ and Xammp on your System
