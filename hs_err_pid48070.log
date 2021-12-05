@@ -16,7 +16,7 @@
 
 ---------------  S U M M A R Y ------------
 
-Command Line: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=53378:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 --module-path=/Users/haneetarya/.m2/repository/org/openjfx/javafx-base/17.0.0.1/javafx-base-17.0.0.1-mac.jar:/Users/haneetarya/.m2/repository/org/openjfx/javafx-controls/17.0.0.1/javafx-controls-17.0.0.1-mac.jar:/Users/haneetarya/.m2/repository/org/openjfx/javafx-fxml/17.0.0.1/javafx-fxml-17.0.0.1-mac.jar:/Users/haneetarya/IdeaProjects/LibraryManagementSystem/target/classes:/Users/haneetarya/.m2/repository/org/openjfx/javafx-graphics/17.0.0.1/javafx-graphics-17.0.0.1-mac.jar -Djdk.module.main=com.haneetarya.librarymanagementsystem com.haneetarya.librarymanagementsystem/com.haneetarya.librarymanagementsystem.HelloApplication
+Command Line: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=53378:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 --module-path=/Users/haneetarya/.m2/repository/org/openjfx/javafx-base/17.0.0.1/javafx-base-17.0.0.1-mac.jar:/Users/haneetarya/.m2/repository/org/openjfx/javafx-controls/17.0.0.1/javafx-controls-17.0.0.1-mac.jar:/Users/haneetarya/.m2/repository/org/openjfx/javafx-fxml/17.0.0.1/javafx-fxml-17.0.0.1-mac.jar:/Users/haneetarya/IdeaProjects/LibraryManagementSystem/target/classes:/Users/haneetarya/.m2/repository/org/openjfx/javafx-graphics/17.0.0.1/javafx-graphics-17.0.0.1-mac.jar -Djdk.module.main=com.haneetarya.librarymanagementsystem com.haneetarya.librarymanagementsystem/com.haneetarya.librarymanagementsystem.App
 
 Host: "MacBookAir7,2" x86_64 1800 MHz, 4 cores, 8G, Darwin 21.1.0, macOS 12.0.1 (21A559)
 Time: Sun Nov 21 20:10:32 2021 IST elapsed time: 9.529789 seconds (0d 0h 0m 9s)
@@ -1093,7 +1093,7 @@ Dynamic libraries:
 
 VM Arguments:
 jvm_args: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=53378:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 --module-path=/Users/haneetarya/.m2/repository/org/openjfx/javafx-base/17.0.0.1/javafx-base-17.0.0.1-mac.jar:/Users/haneetarya/.m2/repository/org/openjfx/javafx-controls/17.0.0.1/javafx-controls-17.0.0.1-mac.jar:/Users/haneetarya/.m2/repository/org/openjfx/javafx-fxml/17.0.0.1/javafx-fxml-17.0.0.1-mac.jar:/Users/haneetarya/IdeaProjects/LibraryManagementSystem/target/classes:/Users/haneetarya/.m2/repository/org/openjfx/javafx-graphics/17.0.0.1/javafx-graphics-17.0.0.1-mac.jar -Djdk.module.main=com.haneetarya.librarymanagementsystem 
-java_command: com.haneetarya.librarymanagementsystem/com.haneetarya.librarymanagementsystem.HelloApplication
+java_command: com.haneetarya.librarymanagementsystem/com.haneetarya.librarymanagementsystem.App
 java_class_path (initial): /Users/haneetarya/.m2/repository/org/openjfx/javafx-controls/17.0.0.1/javafx-controls-17.0.0.1.jar:/Users/haneetarya/.m2/repository/org/openjfx/javafx-graphics/17.0.0.1/javafx-graphics-17.0.0.1.jar:/Users/haneetarya/.m2/repository/org/openjfx/javafx-base/17.0.0.1/javafx-base-17.0.0.1.jar:/Users/haneetarya/.m2/repository/org/openjfx/javafx-fxml/17.0.0.1/javafx-fxml-17.0.0.1.jar:/Users/haneetarya/IdeaProjects/LibraryManagementSystem/src/Lib/mysql-connector-java-8.0.27.jar
 Launcher Type: SUN_STANDARD
 

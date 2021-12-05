@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.haneetarya.librarymanagementsystem/com.haneetarya.librarymanagementsystem.HelloApplication
+                                com.haneetarya.librarymanagementsystem/com.haneetarya.librarymanagementsystem.App
                             </mainClass>
                         </configuration>
                     </execution>
